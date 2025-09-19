@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Timber & Craft</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div class="logo">TC</div>
+        <div>
+          <div style="font-weight:700">Timber & Craft</div>
+          <div style="font-size:12px;color:var(--muted)">Handmade • Sustainable • Inspired</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="icons">
+        <button class="icon-btn" title="Search">🔍</button>
+        <button class="icon-btn" id="cartBtn" title="Cart">🧺 <span id="cartCount" style="font-weight:700;margin-left:6px">0</span></button>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-left">
+        <div style="color:var(--muted);font-weight:600">Nature-inspired Home & Garden</div>
+        <h1>Handmade pieces for calm, green living.</h1>
+        <p>Curated wind chimes, bird houses, wooden decor and eco-friendly garden helpers crafted from sustainably sourced materials.</p>
+        <a class="cta" id="shopNow">Shop Now</a>
+        <div style="margin-top:12px;color:var(--muted);font-size:14px">Free shipping on orders over £50 • 30-day returns</div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-img" aria-hidden="true"></div>
+      </div>
+    </section>
+    
+    <section style="margin-top:18px" id="shop">
+      <div class="section-title">
+        <h2 style="margin:0">Featured Products</h2>
+        <div class="pill muted">Handmade & sustainable</div>
+      </div>
+      <div class="grid" id="productGrid"></div>
+    </section>
+    
+    <section id="categories" style="margin-top:26px">
+      <div class="section-title">
+        <h2 style="margin:0">Explore Categories</h2>
+        <a class="muted" href="#categories">See all</a>
+      </div>
+      <div class="categories">
+        <div class="cat-card"><img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=09b3b6f8ee2fa0f5e7f6b6a6b3f3b4f5" alt="Bird Feeder"><div><strong>Bird Feeders</strong><div class="muted" style="font-size:13px">Bring feathered friends</div></div></div>
+        <div class="cat-card"><img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=d7b2c9425c3a9c8b6d0f8a1f5f1d1d3b" alt="Wind Chimes"><div><strong>Wind Chimes</strong><div class="muted" style="font-size:13px">Tuned & gentle tones</div></div></div>
+        <div class="cat-card"><img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=fe1f6c0b2a0a8b0cde9f6fbd8c1a8b6c" alt="Wooden Decor"><div><strong>Wooden Decor</strong><div class="muted" style="font-size:13px">Carved character</div></div></div>
+        <div class="cat-card"><img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=8d2e2b9b2a0a6c5c0a16c1461b8c9f9f" alt="Bug Hotel"><div><strong>Garden Helpers</strong><div class="muted" style="font-size:13px">Pollinators & wildlife</div></div></div>
+      </div>
+    </section>
+    
+    <section class="eco">
+      <div style="flex:1">
+        <h3>Handmade • Sustainable • Inspired by Nature</h3>
+        <p class="muted">We partner with local artisans and use sustainably sourced wood and recycled metals. Every piece is made to last and to bring nature a little closer to home.</p>
+      </div>
+      <div style="text-align:right">
+        <div class="pill">Low-waste packaging</div>
+        <div class="pill" style="margin-top:8px">Carbon neutral shipping</div>
+      </div>
+    </section>
+    
+    <section class="testimonials">
+      <div class="section-title"><h2 style="margin:0">What customers say</h2><div class="muted">Real reviews from real gardens</div></div>
+      <div id="testiWrap"></div>
+    </section>
+    
+    <section class="newsletter" aria-label="Newsletter">
+      <div class="glass">
+        <h3 style="margin:0 0 8px 0">Join our garden circle</h3>
+        <p class="muted" style="margin-top:0">Sign up for gentle tips, early drops and seasonal offers.</p>
+        <form id="newsletterForm" style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+          <input aria-label="Email" required placeholder="name@domain.com" style="flex:1;padding:12px;border-radius:10px;border:0;min-width:200px" />
+          <button class="cta" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="footer-grid">
+      <div style="flex:1">
+        <strong>Timber & Craft</strong>
+        <div class="muted">Handmade goods • Sustainable materials</div>
+        <div style="margin-top:8px">Email: hello@timberandcraft.co.uk</div>
+        <div class="muted" style="margin-top:4px">© Timber & Craft — 2025</div>
+      </div>
+      <div>
+        <strong>Quick Links</strong>
+        <div class="muted" style="margin-top:8px">Home • Shop • About • Contact</div>
+      </div>
+      <div>
+        <strong>Follow</strong>
+        <div class="muted" style="margin-top:8px">Instagram • Pinterest • Facebook</div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="productModal" role="dialog" aria-hidden="true">
+    <div class="modal-inner fade-in">
+      <div class="gallery">
+        <img src="" alt="Product image" class="main-img" id="mainImg">
+        <div class="thumbs" id="thumbs"></div>
+      </div>
+      <div>
+        <h2 class="title" id="pTitle"></h2>
+        <div class="muted" id="pCat"></div>
+        <div style="font-size:20px;margin-top:8px;color:var(--accent-2)" id="pPrice"></div>
+        <p id="pShort" class="muted" style="margin-top:12px"></p>
+        <button class="add-cart" id="addToCart">Add to cart</button>
+        <div style="margin-top:14px">
+          <strong>Details</strong>
+          <p class="muted" id="pSpec"></p>
+        </div>
+        <div style="margin-top:12px">
+          <strong>Suggested</strong>
+          <div id="related" class="grid" style="grid-template-columns:1fr 1fr;gap:10px;margin-top:8px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <strong>Your Cart</strong>
+    <div id="cartItems" style="margin-top:12px"></div>
+    <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center">
+      <div><strong>Total:</strong> <span id="cartTotal">£0.00</span></div>
+      <button class="cta" id="checkout">Checkout</button>
+    </div>
+  </div>
+
+  <div id="confirmation-toast" class="confirmation-toast">✓ Added to cart</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
